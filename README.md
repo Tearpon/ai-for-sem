@@ -2,17 +2,13 @@
 
 ## 项目简介
 
-本项目基于改进的 **Xception-MicroNet-MultiScale-CBAM** 深度学习模型，实现利用近红外扫描电子显微镜（Near-Infrared Scanning Electron Microscopy, NIR-SEM）图像对钙钛矿发光二极管（Perovskite Light-Emitting Diodes, PeLEDs）的外量子效率（External Quantum Efficiency, EQE）进行高精度预测。
+本项目基于改进的 **Xception-MicroNet-MultiScale-CBAM** 深度学习模型，实现利用近红外扫描电子显微镜图像对钙钛矿发光二极管（PeLEDs）的外量子效率（EQE）进行预测。
 
 模型采用：
 
-* Xception-MicroNet 轻量化骨干网络
-* Multi-Scale 多尺度特征提取模块
+* Xception-MicroNet 网络
+* Multi-Scale 多尺度特征提取
 * CBAM-LIPCA 注意力增强机制
-* 端到端回归预测框架
-
-无需重新训练模型，用户仅需加载预训练权重即可完成批量图像推理、性能预测及结果可视化分析。
-
 
 ## 环境要求
 
@@ -33,9 +29,6 @@ Python ≥ 3.8
 * NVIDIA RTX 3060
 * NVIDIA RTX 4060
 * NVIDIA RTX 4070
-* NVIDIA RTX 4090
-
-CPU 环境同样可运行，但推理速度会明显降低。
 
 ---
 
@@ -45,19 +38,6 @@ CPU 环境同样可运行，但推理速度会明显降低。
 
 ```bash
 pip install torch>=1.10.0 torchvision>=0.11.0 pandas>=1.3.0 numpy>=1.21.0 matplotlib>=3.4.0 tqdm>=4.62.0 scikit-learn>=1.0.0 pillow>=8.3.0
-```
-
-或分别安装：
-
-```bash
-pip install torch
-pip install torchvision
-pip install pandas
-pip install numpy
-pip install matplotlib
-pip install tqdm
-pip install scikit-learn
-pip install pillow
 ```
 
 ---
