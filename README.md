@@ -1,30 +1,28 @@
-# Xception-MicroNet-MultiScale-CBAM 近红外 SEM 图像 EQE 预测系统
+# Xception-MicroNet-MultiScale-CBAM NIR SEM Image EQE Prediction System
 
-## 项目简介
+## Project Overview
 
-本项目基于改进的 **Xception-MicroNet-MultiScale-CBAM** 深度学习模型，实现利用近红外扫描电子显微镜图像对钙钛矿发光二极管（PeLEDs）的外量子效率（EQE）进行预测。
+This project adopts an improved **Xception-MicroNet-MultiScale-CBAM** deep learning model to predict the external quantum efficiency (EQE) of perovskite light-emitting diodes (PeLEDs) using near-infrared scanning electron microscope (SEM) images.
 
-模型采用：
+The model integrates the following modules:
+* Xception-MicroNet backbone network
+* Multi-Scale feature extraction module
+* CBAM-LIPCA attention enhancement mechanism
 
-* Xception-MicroNet 网络
-* Multi-Scale 多尺度特征提取
-* CBAM-LIPCA 注意力增强机制
-
-## 环境要求
+## Environment Requirements
 
 ### Python
 
-推荐版本：
+Recommended version:
 
 ```text
 Python ≥ 3.8
 ```
 
-### GPU（推荐）
+### GPU (Recommended)
 
-为获得最佳推理速度，建议使用支持 CUDA 的 NVIDIA GPU。
-
-例如：
+An NVIDIA GPU with CUDA support is recommended to achieve optimal inference speed.
+Recommended hardware examples:
 
 * NVIDIA RTX 3060
 * NVIDIA RTX 4060
@@ -32,27 +30,26 @@ Python ≥ 3.8
 
 ---
 
-## 依赖安装
+## Dependency Installation
 
-可通过以下命令一次性安装所有依赖库：
+Run the following command to install all required libraries in one batch:
 
 ```bash
 pip install torch>=1.10.0 torchvision>=0.11.0 pandas>=1.3.0 numpy>=1.21.0 matplotlib>=3.4.0 tqdm>=4.62.0 scikit-learn>=1.0.0 pillow>=8.3.0
 ```
-
 ---
 
-## 预训练模型下载
+## Pre-trained Model Weights Download
 
-本项目提供已经训练完成的模型权重文件。
+Pre-trained Model Weights Download
 
-### 百度网盘下载
+### Baidu Netdisk Download
 
-链接：
+Download link:
 
 https://pan.baidu.com/s/1KTnRsP2lPBnBj8ZCsBRwrQ
 
-提取码：
+Extraction code:
 
 ```text
 yuqa
@@ -60,11 +57,10 @@ yuqa
 
 ---
 
-## 权重文件配置
+## Weight File Configuration
 
-下载完成后，请将所有 `.pth` 文件放入推理脚本中指定的权重目录。
-
-例如：
+After downloading, place all .pth weight files into the weight directory specified in the inference script.
+Directory structure example:
 
 ```text
 project/
@@ -78,7 +74,7 @@ project/
 └── test_images/
 ```
 
-确保代码中的路径设置正确：
+Verify the file path variable in the code matches the folder location:
 
 ```python
 model_weights_path = "./model_weights"
@@ -86,9 +82,9 @@ model_weights_path = "./model_weights"
 
 ---
 
-## 数据准备
+## Data Preparation
 
-将待预测的近红外 SEM 图像放入测试目录：
+Place all NIR SEM images to be predicted into the test image directory:
 
 ```text
 test_images/
@@ -100,19 +96,19 @@ test_images/
 
 ---
 
-## 注意事项
+## Precautions
 
-1. 输入图像应与训练数据具有相同或相近的 SEM 成像条件；
-2. 图像分辨率应保持与训练阶段一致；
-3. 推理前请确认权重文件路径正确；
-4. 若使用 GPU，请确保 CUDA 环境配置正确；
-5. 首次运行时建议先测试少量样本验证环境配置。
+1.Input SEM images should be captured under imaging conditions consistent with or similar to the training dataset;
+2.Image resolution must match the resolution used during model training;
+3.Double-check the weight file path before running inference;
+4.If GPU acceleration is enabled, ensure the CUDA environment is properly configured;
+5.It is recommended to run inference on a small subset of test samples first to validate the full environment setup.
 
 ---
 
-## 联系方式
+## Contact Information
 
-如有问题或建议，请通过论文通讯作者或项目维护者联系。
+For inquiries or suggestions, please contact the corresponding author of the related paper or project maintainer.
 
 ---
 
