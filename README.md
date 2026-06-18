@@ -93,23 +93,24 @@ test_images/
 ├── sample_003.png
 └── ...
 ```
+```text
 test_image_1 is derived from Nano Letters, 2021, 21 (9): 3993-4001
 test_image_2 is derived from Nature Communications, 2021, 12 (1): 644
 test_image_3 is derived from Nano-Micro Letters, 2023, 15: 125
 test_image_4 is derived from Nature Communications, 2024, 15 (1): 10760
 test_image_5 is derived from Matter, 2021, 4 (11): 3710-3724
 test_image_6 is derived from Joule, 2024, 8 (4): 1176-1190
-
+```
 ---
 
 ## Precautions
-
+```text
 1.Input SEM images should be captured under imaging conditions consistent with or similar to the training dataset;
 2.Image resolution must match the resolution used during model training;
 3.Double-check the weight file path before running inference;
 4.If GPU acceleration is enabled, ensure the CUDA environment is properly configured;
 5.It is recommended to run inference on a small subset of test samples first to validate the full environment setup.
-
+```
 ---
 
 ## Contact Information
