@@ -97,7 +97,14 @@ test_images/
 ├── sample_003.png
 └── ...
 ```
-
+```text
+test_image_1 源于 Nano-Micro Letters, 2023, 15: 125
+test_image_2 源于 Matter, 2021, 4 (11): 3710-3724
+test_image_3 源于 Nature Communications, 2024, 15 (1): 10760
+test_image_4 源于 Nature Communications, 2021, 12 (1): 644
+test_image_5 源于 Nano Letters, 2021, 21 (9): 3993-4001
+test_image_6 源于 Joule, 2024, 8 (4): 1176-1190
+```
 ---
 
 ## 注意事项
